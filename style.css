@@ -1,0 +1,190 @@
+body {
+  background-color: #121212;
+  font-family: sans-serif;
+  padding: 20px;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* push items to the right */
+  padding: 10px 40px;
+}
+
+nav ul {
+  display: flex;
+  gap: 54px;
+  list-style: none;
+  margin: 0 30% 0 0; /* space before Resume button */
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #00d1b2;
+}
+
+.btn {
+  border-radius: 9999px;
+  padding: 8px 18px;
+  border: 2px solid #00d1b2;
+  background: transparent;
+  cursor: pointer;
+  color: #00d1b2;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+/* Hero Section */
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5%;
+  flex-wrap: wrap; /* allows stacking on small screens */
+  flex-direction: row-reverse;
+  padding: 0 90px;
+}
+
+.section-image img {
+  width: 100%;
+  max-width: 300px;
+}
+
+.info-section {
+  max-width: 500px;
+  color: #f1f1f1;
+}
+
+.info-section h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.info-section p {
+  color: #d1d1d1;
+  margin: 16px 0;
+}
+
+/* Buttons */
+.div-button {
+  display: flex;
+  gap: 12px;
+}
+
+button {
+  background: #00d1b2;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #009d89;
+}
+
+.btn:hover{
+    background: #009d89;
+}
+
+/* Icons */
+
+
+.div-icon a {
+  margin-left: 12px;
+  color: #00d1b2;   /* 👈 same as button color */
+  font-size: 25px;
+  transition: color 0.3s ease;
+}
+
+
+.div-icon a:hover {
+  color: #82cfff;   /* 👈 lighter on hover, just like buttons */
+}
+
+a:hover {
+  color: #82cfff;
+}
+
+button:hover, 
+.btn:hover {
+  background: #00d1b2;
+  box-shadow: 0 0 15px #00d1b2;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* -----------------------
+   Mobile Responsiveness
+-------------------------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    margin: 10px 0;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .info-section {
+    margin-top: 20px;
+  }
+
+  .info-section h1 {
+    font-size: 28px;
+  }
+
+  .section-image img {
+    max-width: 250px;
+  }
+}
+
+/* Hide resume button on small screens */
+@media (max-width: 768px) {
+  .btn {
+    display: none;
+  }
+}
+
+
+/* Add this in your CSS */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.info-section, .section-image {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+
+.icon {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  color: #00d1b2; /* inherits button color */
+}
+
